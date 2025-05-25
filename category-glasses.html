@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Готовые очки</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+
+
+        <div class="main-category">
+
+            <div class="filter" id="myBtnContainer">
+                <div class="title-filter">
+                    <img src="./img/filter.png" class="filter-icon"><span>Фильтр</span>
+                </div>
+
+                <hr>
+                <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+                <hr>
+                <p class="filter-name">Материал оправы</p>
+                <button class="btn" onclick="filterSelection('metal')">Металл</button>
+                <button class="btn" onclick="filterSelection('plastic')">Пластик</button>
+                <button class="btn" onclick="filterSelection('plastic-tr90')">Пластик TR-90</button>
+                <button class="btn" onclick="filterSelection('comb')">Комбинированная</button>
+                <hr>
+                <p class="filter-name">Пол</p>
+                <button class="btn" onclick="filterSelection('girl')">Женские</button>
+                <button class="btn" onclick="filterSelection('men')">Мужские</button>
+                <button class="btn" onclick="filterSelection('any')">Любой</button>
+                <hr>
+                <p class="filter-name">Тип оправы</p>
+                <button class="btn" onclick="filterSelection('rimless')">Безободковая</button>
+                <button class="btn" onclick="filterSelection('rimmed')">Ободковая</button>
+                <button class="btn" onclick="filterSelection('semi-rimmed')">Полуободковая</button>
+                <hr>
+                <p class="filter-name">Ширина переносицы</p>
+                <button class="btn" onclick="filterSelection('7mm')">7</button>
+                <button class="btn" onclick="filterSelection('14mm')">14</button>
+                <button class="btn" onclick="filterSelection('15mm')">15</button>
+                <button class="btn" onclick="filterSelection('16mm')">16</button>
+                <button class="btn" onclick="filterSelection('17mm')">17</button>
+                <button class="btn" onclick="filterSelection('18mm')">18</button>
+                <button class="btn" onclick="filterSelection('19mm')">19</button>
+                <button class="btn" onclick="filterSelection('20mm')">20</button>
+            </div>
+
+            <button class="cart" id="cart">
+                <img class="cart__image" src="./img/korzina.png" alt="Cart"/>
+                <div class="cart__num" id="cart_num">0</div>
+                </button>
+
+            <div class="items-zone">
+                <div class="container">
+
+                    <div class="product filterDiv plastic any semi-rimmed 15mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/glasses1.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Готовые очки Mien "лектор" 908</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Любой</p>
+                                    <p> Тип оправы — Полуободковаяя</p>
+                                    <p> Форма оправы — Лектор</p>
+                                    <p> Материал оправы — Пластик</p>
+                                    <p> Характеристики — +0.75</p>
+                                    <p> Ширина переносицы — 15</p>
+                                    <p> Длина заушника — 140</p>
+                                    <p> Основной цвет — Прозрачный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">75</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv plastic girl rimmed 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/glasses2.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Готовые очки Mien 8071 c2</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Женские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Бабочки/Стрекозы</p>
+                                    <p> Материал оправы — Пластик</p>
+                                    <p> Характеристики — +1.00</p>
+                                    <p> Ширина переносицы — 16</p>
+                                    <p> Длина заушника — 140</p>
+                                    <p> Основной цвет — Красный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">75</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv plastic any rimless 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/glasses3.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Готовые очки Mien 8036 c2</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Любой</p>
+                                    <p> Тип оправы — Безободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Пластик</p>
+                                    <p> Характеристики — +1.00</p>
+                                    <p> Ширина переносицы — 16</p>
+                                    <p> Длина заушника — 132</p>
+                                    <p> Основной цвет — Серый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">110</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv metal girl rimmed 18mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/glasses4.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Готовые очки Mien 8070 c2</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Женские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Металл</p>
+                                    <p> Характеристики — +1.00 +1.50 +2.00 +2.50 +3.00 +3.50 +4.00</p>
+                                    <p> Ширина переносицы — 18</p>
+                                    <p> Длина заушника — 140</p>
+                                    <p> Основной цвет — Серый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">187</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv comb men semi-rimmed 7mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/glasses5.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Готовые очки Mien 8023 c2</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Мужские</p>
+                                    <p> Тип оправы — Полуободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Комбинированная</p>
+                                    <p> Характеристики — -3.50 -3.00 -2.50 -2.00 -1.50 -1.00 +1.00 +1.50 +2.00 +2.50</p>
+                                    <p> Ширина переносицы — 7</p>
+                                    <p> Длина заушника — 140</p>
+                                    <p> Основной цвет — Серый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">199</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="product filterDiv plastic men semi-rimmed 17mm">
+                    <div class="product-wrapper">
+                        <div class="img-prod">
+                            <img src="./img/glasses6.webp" class="prod-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Готовые очки Salvo 50010 c2</h3>
+                            <div class="product-details">
+                                <p> Тип товара — Готовые очки</p>
+                                    <p> Пол — Мужские</p>
+                                    <p> Тип оправы — Полуободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Пластик</p>
+                                    <p> Характеристики — +0.75 +1.00 +1.25 +4.00</p>
+                                    <p> Ширина переносицы — 17</p>
+                                    <p> Длина заушника — 140</p>
+                                    <p> Основной цвет — Коричневый</p>
+                            </div>
+                            <div class="product-price-block">
+                                <p> <span class="product-price">150</span>p/шт</p>
+                                <button class="card__add">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup__container" id="popup_container">
+              <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+              </div>
+              <div class="popup__item" id="popup_product_list">
+                <div class="popup__product">
+                  <div class="popup__product-wrap">
+                    <img
+                      src="./img/frame-glasses1.png"
+                      alt='Оправа'
+                      class="popup__product-image"/>
+                    <h2 class="popup__product-title">Оправа Talent 3042 c070</h2>
+                  </div>
+                  <div class="popup__product-wrap">
+                    <div class="popup__product-price">170</div>
+                    <button class="popup__product-delete">✖</button>
+                  </div></div></div>
+              <div class="popup__item">
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого</h2>
+                  <output class="popup__cost-value" id="popup_cost">170</output>
+                </div>
+                <div class="accept">
+                <a href="" id="confirm_order"> Подтвердить </a>
+              </div></div>
+              <button class="popup__close" id="popup_close">✖</button>
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <div class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com</div>
+            <div class="feedback"><img src="./img/Phone.png" class="feedback-img"> +7 (777) 375-10-51</div>
+        </div>
+    </footer>
+</body>
+<script src="script2.js"></script>
+<script src="filter.js"></script>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Аксессуары</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+
+
+        <div class="main-category">
+
+            <div class="filter" id="myBtnContainer">
+                <div class="title-filter">
+                    <img src="./img/filter.png" class="filter-icon"><span>Фильтр</span>
+                </div>
+                <hr>
+                <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+                <hr>
+                <p class="filter-name">Тип товара</p>
+                <div class="btn-wrapper">
+                    <button class="btn" onclick="filterSelection('stopper')">Стопперы</button>
+                    <button class="btn" onclick="filterSelection('chain')">Цепочки</button>
+                    <button class="btn" onclick="filterSelection('lace')">Шнурки</button>
+                    <button class="btn" onclick="filterSelection('napkin')">Салфетки</button>
+                </div>
+                <hr>
+                <p class="filter-name">Основной цвет</p>
+                <div class="color-wrapper-main">
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('redColor')">Красный</button>
+                    <div class="color red"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('orangeColor')">Оранжевый</button>
+                    <div class="color orange"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('yellowColor')">Желтый</button>
+                    <div class="color yellow"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('greenColor')">Зеленый</button>
+                    <div class="color green"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('lBlueColor')">Голубой</button>
+                    <div class="color lBlue"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('dBlueColor')">Синий</button>
+                    <div class="color dBlue"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('purpleColor')">Фиолетовый</button>
+                    <div class="color purple"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('whiteColor')">Белый</button>
+                    <div class="color white"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('blackColor')">Черный</button>
+                    <div class="color black"></div>
+                </div>
+                <div class="color-wrapper"><button class="btn" onclick="filterSelection('mixColor')">Разноцветный</button>
+                    <div class="color mix"></div>
+                </div></div>
+            </div>
+
+            <button class="cart" id="cart">
+                <img class="cart__image" src="./img/korzina.png" alt="Cart"/>
+                <div class="cart__num" id="cart_num">0</div>
+                </button>
+
+            <div class="items-zone">
+                <div class="container">
+                    <div class="product filterDiv lace mixColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories1.png" alt="Шнурки для очков №1" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Шнурки для очков №1 (1 шт.)</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Шнурки</p>
+                                    <p>Цвет — Разноцветный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">99</span>p/шт</p>
+                                    <button class="card__add" >В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv chain lBlueColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories2.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Цепочка для очков №1</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Цепочка</p>
+                                    <p>Цвет — Бирюзовый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">159</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv stopper yellowColor dBlueColor redColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories3.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Стоппер-шнурок "Цветной №1"</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Стоппер</p>
+                                    <p>Цвет — Синий, красный, желтый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">74</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv chain yellowColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories4.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Цепочка для очков листья</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Цепочка</p>
+                                    <p>Цвет — Золотой</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">269</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv napkin mixColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories5.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Салфетка для очков (15*15-10шт.)</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Салфетка</p>
+                                    <p>Цвет — Разноцветный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">65</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv chain yellowColor whiteColor blackColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories6.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Цепочка для очков №15 (1шт.)</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Цепочка</p>
+                                    <p>Цвет — Золотой, серебряный, черный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">119</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv lace mixColor">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/accessories7.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Шнурок для очков детский "яблоко" (уп. 12шт)</h3>
+                                <div class="product-details">
+                                    <p>Тип товара — Шнурок</p>
+                                    <p>Цвет — Разноцветный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">169</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="popup">
+            <div class="popup__container" id="popup_container">
+              <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+              </div>
+              <div class="popup__item" id="popup_product_list">
+                <div class="popup__product">
+                  <div class="popup__product-wrap">
+                    <img
+                      src="./img/frame-glasses1.png"
+                      alt='Оправа'
+                      class="popup__product-image"/>
+                    <h2 class="popup__product-title">Оправа Talent 3042 c070</h2>
+                  </div>
+                  <div class="popup__product-wrap">
+                    <div class="popup__product-price">170</div>
+                    <button class="popup__product-delete">✖</button>
+                  </div></div></div>
+              <div class="popup__item">
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого</h2>
+                  <output class="popup__cost-value" id="popup_cost">170</output>
+                </div>
+                <div class="accept">
+                <a href="" id="confirm_order"> Подтвердить </a>
+              </div></div>
+              <button class="popup__close" id="popup_close">✖</button>
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <div class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com</div>
+            <div class="feedback"><img src="./img/Phone.png" class="feedback-img"> +7 (777) 375-10-51</div>
+        </div>
+    </footer>
+</body>
+
+<script src="filter.js"></script>
+<script src="script2.js"></script>
+
+</html>

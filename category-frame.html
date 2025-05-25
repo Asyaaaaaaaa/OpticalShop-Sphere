@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Оправы</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+
+
+        <div class="main-category">
+
+            <div class="filter" id="myBtnContainer">
+                <div class="title-filter">
+                    <img src="./img/filter.png" class="filter-icon"><span>Фильтр</span>
+                </div>
+
+            <hr>
+                <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+                <hr>
+                <p class="filter-name">Материал оправы</p>
+                <button class="btn" onclick="filterSelection('metal')">Металл</button>
+                <button class="btn" onclick="filterSelection('plastic')">Пластик</button>
+                <button class="btn" onclick="filterSelection('silicon')">Силикон</button>
+                <button class="btn" onclick="filterSelection('comb')">Комбинированная</button>
+            <hr>
+                <p class="filter-name">Пол</p>
+                <button class="btn" onclick="filterSelection('girl')">Женские</button>
+                <button class="btn" onclick="filterSelection('men')">Мужские</button>
+                <button class="btn" onclick="filterSelection('any')">Любой</button>
+                <button class="btn" onclick="filterSelection('teen')">Подростковые</button>
+                <button class="btn" onclick="filterSelection('kids')">Детские</button>
+                <hr>
+                <p class="filter-name">Тип оправы</p>
+                <button class="btn" onclick="filterSelection('rimless')">Безободковая</button>
+                <button class="btn" onclick="filterSelection('rimmed')">Ободковая</button>
+                <button class="btn" onclick="filterSelection('semi-rimmed')">Полуободковая</button>
+            <hr>
+                <p class="filter-name">Ширина переносицы</p>
+                <button class="btn" onclick="filterSelection('11mm')">11</button>
+                <button class="btn" onclick="filterSelection('12mm')">12</button>
+                <button class="btn" onclick="filterSelection('13mm')">13</button>
+                <button class="btn" onclick="filterSelection('14mm')">14</button>
+                <button class="btn" onclick="filterSelection('15mm')">15</button>
+                <button class="btn" onclick="filterSelection('16mm')">16</button>
+                <button class="btn" onclick="filterSelection('17mm')">17</button>
+                <button class="btn" onclick="filterSelection('18mm')">18</button>
+                <button class="btn" onclick="filterSelection('19mm')">19</button>
+                <button class="btn" onclick="filterSelection('20mm')">20</button>
+                <button class="btn" onclick="filterSelection('21mm')">21</button>
+                <button class="btn" onclick="filterSelection('22mm')">22</button>
+                <button class="btn" onclick="filterSelection('23mm')">23</button>
+            </div>
+
+            <button class="cart" id="cart">
+                <img class="cart__image" src="./img/korzina.png" alt="Cart"/>
+                <div class="cart__num" id="cart_num">0</div>
+                </button>
+
+
+                <div class="container">
+
+                    <div class="product filterDiv metal kids rimmed 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses1.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Talent 3042 c070</h3>
+                                <div class="product-details">
+                                        <p> Тип товара — Оправа</p>
+                                        <p> Пол — Детские</p>
+                                        <p> Тип оправы — Ободковая</p>
+                                        <p> Форма оправы — Прямоугольная</p>
+                                        <p> Материал оправы — Металл</p>
+                                        <p> Проем ободка — 43</p>
+                                        <p> Ширина переносицы —16</p>
+                                        <p> Длина заушника — 120</p>
+                                        <p> Основной цвет — Красный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">170</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv metal kids rimmed 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses2.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Victory 0022 c2</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Оправа</p>
+                                    <p> Пол — Детские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Металл</p>
+                                    <p> Проем ободка — 43</p>
+                                    <p> Ширина переносицы —16</p>
+                                    <p> Длина заушника — 120</p>
+                                    <p> Основной цвет — Разноцветный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">172</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv metal kids rimmed 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses3.png" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Victory 0022 c3</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Оправа</p>
+                                    <p> Пол — Детские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Прямоугольная</p>
+                                    <p> Материал оправы — Металл</p>
+                                    <p> Проем ободка — 43</p>
+                                    <p> Ширина переносицы —16</p>
+                                    <p> Длина заушника — 120</p>
+                                    <p> Основной цвет — Разноцветный </p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">172</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv plastic girl rimmed 18mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses4.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Nikitana NI3862 c4</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Оправа</p>
+                                    <p> Пол — Женские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Бабочки/Стрекозы</p>
+                                    <p> Материал оправы — Пластик</p>
+                                    <p> Проем ободка — 52</p>
+                                    <p> Ширина переносицы —18</p>
+                                    <p> Длина заушника — 142</p>
+                                    <p> Основной цвет — Синий</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">194</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv silicon kids rimmed 14mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses5.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Zazu 68002 c5</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Оправа</p>
+                                    <p> Пол — Детские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Овальная</p>
+                                    <p> Материал оправы — Силикон</p>
+                                    <p> Проем ободка — 43</p>
+                                    <p> Ширина переносицы —14</p>
+                                    <p> Длина заушника — 130</p>
+                                    <p> Основной цвет — Сиреневый</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">360</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv comb girl rimmed 16mm">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/frame-glasses6.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Оправа Amshar AM 8353 c6</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Оправа</p>
+                                    <p> Пол — Женские</p>
+                                    <p> Тип оправы — Ободковая</p>
+                                    <p> Форма оправы — Бабочки/Стрекозы</p>
+                                    <p> Материал оправы — Комбинированная</p>
+                                    <p> Проем ободка — 55</p>
+                                    <p> Ширина переносицы —16</p>
+                                    <p> Длина заушника — 145</p>
+                                    <p> Основной цвет — Черный</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">285</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="popup">
+                <div class="popup__container" id="popup_container">
+                  <div class="popup__item">
+                    <h1 class="popup__title">Оформление заказа</h1>
+                  </div>
+                  <div class="popup__item" id="popup_product_list">
+                    <div class="popup__product">
+                      <div class="popup__product-wrap">
+                        <img
+                          src="./img/frame-glasses1.png"
+                          alt='Оправа'
+                          class="popup__product-image"/>
+                        <h2 class="popup__product-title">Оправа Talent 3042 c070</h2>
+                      </div>
+                      <div class="popup__product-wrap">
+                        <div class="popup__product-price">170</div>
+                        <button class="popup__product-delete">✖</button>
+                      </div></div></div>
+                  <div class="popup__item">
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого</h2>
+                      <output class="popup__cost-value" id="popup_cost">170</output>
+                    </div>
+                    <div class="accept">
+                    <a href="" id="confirm_order"> Подтвердить </a>
+                  </div></div>
+                  <button class="popup__close" id="popup_close">✖</button>
+                </div>
+
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <div class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com</div>
+            <div class="feedback"><img src="./img/Phone.png" class="feedback-img"> +7 (777) 375-10-51</div>
+        </div>
+    </footer>
+</body>
+<script src="script2.js"></script>
+<script src="filter.js"></script>
+
+</html>

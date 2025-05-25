@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Контактные линзы</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+
+        <div class="main-category">
+            <div class="filter" id="myBtnContainer">
+                <div class="title-filter">
+                    <img src="./img/filter.png" class="filter-icon"><span>Фильтр</span>
+                </div>
+                <hr>
+                <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+                <hr>
+                <p class="filter-name">Частота замены</p>
+                <button class="btn" onclick="filterSelection('1day')">Один день</button>
+                <button class="btn" onclick="filterSelection('2weeks')">Две недели</button>
+                <button class="btn" onclick="filterSelection('1month')">Один месяц</button>
+                <button class="btn" onclick="filterSelection('3months')">Три месяца</button>
+                <button class="btn" onclick="filterSelection('6months')">Шесть месяцев</button>
+                <hr>
+                <p class="filter-name">Количество блистеров в упаковке</p>
+                <button class="btn" onclick="filterSelection('1piece')">1</button>
+                <button class="btn" onclick="filterSelection('2pieces')">2</button>
+                <button class="btn" onclick="filterSelection('3pieces')">3</button>
+                <button class="btn" onclick="filterSelection('4pieces')">4</button>
+                <button class="btn" onclick="filterSelection('6pieces')">6</button>
+                <button class="btn" onclick="filterSelection('12pieces')">12</button>
+                <button class="btn" onclick="filterSelection('24pieces')">24</button>
+                <button class="btn" onclick="filterSelection('30pieces')">30</button>
+                <button class="btn" onclick="filterSelection('90pieces')">90</button>
+                <hr>
+                <p class="filter-name">Оптическая сила</p>
+                <div class="filter-wrapper">
+                    <button class="btn" onclick="filterSelection('-7.00op')">-7.00</button>
+                    <button class="btn" onclick="filterSelection('-6.50op')">-6.50</button>
+                    <button class="btn" onclick="filterSelection('-6.00op')">-6.00</button>
+                    <button class="btn" onclick="filterSelection('-5.50op')">-5.50</button>
+                    <button class="btn" onclick="filterSelection('-5.00op')">-5.00</button>
+                    <button class="btn" onclick="filterSelection('-4.50op')">-4.50</button>
+                    <button class="btn" onclick="filterSelection('-4.00op')">-4.00</button>
+                    <button class="btn" onclick="filterSelection('-3.50op')">-3.50</button>
+                    <button class="btn" onclick="filterSelection('-3.00op')">-3.00</button>
+                    <button class="btn" onclick="filterSelection('-2.50op')">-2.50</button>
+                    <button class="btn" onclick="filterSelection('-2.00op')">-2.00</button>
+                    <button class="btn" onclick="filterSelection('-1.50op')">-1.50</button>
+                    <button class="btn" onclick="filterSelection('-1.00op')">-1.00</button>
+                    <button class="btn" onclick="filterSelection('-0.50op')">-0.50</button>
+                    <button class="btn" onclick="filterSelection('+0.50op')">+0.50</button>
+                    <button class="btn" onclick="filterSelection('+1.00op')">+1.00</button>
+                    <button class="btn" onclick="filterSelection('+1.50op')">+1.50</button>
+                    <button class="btn" onclick="filterSelection('+2.00op')">+2.00</button>
+                    <button class="btn" onclick="filterSelection('+2.50op')">+2.50</button>
+                    <button class="btn" onclick="filterSelection('+3.00op')">+3.00</button>
+                    <button class="btn" onclick="filterSelection('+3.50op')">+3.50</button>
+                    <button class="btn" onclick="filterSelection('+4.00op')">+4.00</button>
+                    <button class="btn" onclick="filterSelection('+4.50op')">+4.50</button>
+                    <button class="btn" onclick="filterSelection('+5.00op')">+5.00</button>
+                    <button class="btn" onclick="filterSelection('+5.50op')">+5.50</button>
+                    <button class="btn" onclick="filterSelection('+6.00op')">+6.00</button>
+                    <button class="btn" onclick="filterSelection('+6.50op')">+6.50</button>
+                    <button class="btn" onclick="filterSelection('+7.00op')">+7.00</button>
+                </div>
+                <hr>
+                <p class="filter-name">Радиус кривизны</p>
+                <button class="btn" onclick="filterSelection('8.3roc')">8.3</button>
+                <button class="btn" onclick="filterSelection('8.4roc')">8.4</button>
+                <button class="btn" onclick="filterSelection('8.5roc')">8.5</button>
+                <button class="btn" onclick="filterSelection('8.6roc')">8.6</button>
+                <button class="btn" onclick="filterSelection('8.7roc')">8.7</button>
+                <button class="btn" onclick="filterSelection('8.8roc')">8.8</button>
+                <button class="btn" onclick="filterSelection('8.9roc')">8.9</button>
+                <button class="btn" onclick="filterSelection('9.0roc')">9.0</button>
+                <hr>
+                <p class="filter-name">Тип линз</p>
+                <button class="btn" onclick="filterSelection('colorful')">Цветные</button>
+                <button class="btn" onclick="filterSelection('aspherical')">Асферические</button>
+                <button class="btn" onclick="filterSelection('multifocal')">Мультифокальные</button>
+                <button class="btn" onclick="filterSelection('transparent')">Прозрачные</button>
+                <button class="btn" onclick="filterSelection('astigmatic')">Астигматические</button>
+            </div>
+
+            <button class="cart" id="cart">
+                <img class="cart__image" src="./img/korzina.png" alt="Cart"/>
+                <div class="cart__num" id="cart_num">0</div>
+                </button>
+
+            <div class="items-zone">
+                <div class="container">
+
+                    <div class="product filterDiv 2weeks -1.00op 8.4roc transparent 6pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses1.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">ACUVUE OASYS with HYDRACLEAR PLUS (6 линз)</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Готовые очки</p>
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 6 шт.</p>
+                                    <p> Оптическая сила — -1.00</p>
+                                    <p> Радиус кривизны — 8.4</p>
+                                    <p> Тип линз — Прозрачные</p>
+                                    <p> Диаметр МКЛ — 14.0</p>
+                                    <p> Материал — Силикон-гидрогель</p>
+                                    <p> Срок замены — Две недели</p>
+                                    <p> Режим ношения — Дневной, допускается непрерывное ношение до 7 дней</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">1608</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv 1month -1.00op 8.6roc astigmatic 3pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses2.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">TOTAL30 for Astigmatism (3 линзы)</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 3 шт.</p>
+                                    <p> Оптическая сила — -1.00 </p>
+                                    <p> Радиус кривизны — 8.6</p>
+                                    <p> Тип линз — Астигматические</p>
+                                    <p> Диаметр МКЛ —  14.5</p>
+                                    <p> Материал — Водоградиентный</p>
+                                    <p> Срок замены — Один месяц</p>
+                                    <p> Режим ношения — Дневной</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">2580</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product filterDiv 1day -1.00op 8.5roc transparent 90pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses3.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Dailies Total 1</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 90 шт.</p>
+                                    <p> Оптическая сила — -1.00</p>
+                                    <p> Радиус кривизны — 8.5</p>
+                                    <p> Тип линз — Прозрачные</p>
+                                    <p> Диаметр МКЛ — 14.1</p>
+                                    <p> Материал — Водоградиентный</p>
+                                    <p> Срок замены — Один день</p>
+                                    <p> Режим ношения — Дневной</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">6795</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv 1day -1.00op 8.5roc transparent 90pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses4.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">ACUVUE OASYS with HydraLuxe</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 90 шт.</p>
+                                    <p> Оптическая сила — -1.00</p>
+                                    <p> Радиус кривизны — 8.5</p>
+                                    <p> Тип линз — Прозрачные</p>
+                                    <p> Диаметр МКЛ — 14.3</p>
+                                    <p> Материал — Силикон-гидрогель</p>
+                                    <p> Срок замены — Один день</p>
+                                    <p> Режим ношения — Дневной</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">7150</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv 3months -2.00op 8.7roc transparent 4pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses5.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Optima FW</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 4 шт.</p>
+                                    <p> Оптическая сила — -2.00</p>
+                                    <p> Радиус кривизны — 8.7</p>
+                                    <p> Тип линз — Прозрачные</p>
+                                    <p> Диаметр МКЛ — 14.3</p>
+                                    <p> Материал — Гидрогель</p>
+                                    <p> Срок замены — Три месяца</p>
+                                    <p> Режим ношения — Дневной</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">1220</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product filterDiv 1day -3.00op 9.0roc transparent 30pieces">
+                        <div class="product-wrapper">
+                            <div class="img-prod">
+                                <img src="./img/contactLenses6.webp" class="prod-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">ACUVUE OASYS with HydraLuxe</h3>
+                                <div class="product-details">
+                                    <p> Тип товара — Контактные линзы</p>
+                                    <p> Количество — 30 шт.</p>
+                                    <p> Оптическая сила — -3.00</p>
+                                    <p> Радиус кривизны — 9.0</p>
+                                    <p> Тип линз — Прозрачные</p>
+                                    <p> Диаметр МКЛ — 14.3</p>
+                                    <p> Материал — Силикон-гидрогель</p>
+                                    <p> Срок замены — Один день</p>
+                                    <p> Режим ношения — Дневной</p>
+                                </div>
+                                <div class="product-price-block">
+                                    <p> <span class="product-price">2490</span>p/шт</p>
+                                    <button class="card__add">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="popup">
+                <div class="popup__container" id="popup_container">
+                  <div class="popup__item">
+                    <h1 class="popup__title">Оформление заказа</h1>
+                  </div>
+                  <div class="popup__item" id="popup_product_list">
+                    <div class="popup__product">
+                      <div class="popup__product-wrap">
+                        <img
+                          src="./img/frame-glasses1.png"
+                          alt='Оправа'
+                          class="popup__product-image"/>
+                        <h2 class="popup__product-title">Оправа Talent 3042 c070</h2>
+                      </div>
+                      <div class="popup__product-wrap">
+                        <div class="popup__product-price">170</div>
+                        <button class="popup__product-delete">✖</button>
+                      </div></div></div>
+                  <div class="popup__item">
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого</h2>
+                      <output class="popup__cost-value" id="popup_cost">170</output>
+                    </div>
+                    <div class="accept">
+                    <a href="" id="confirm_order"> Подтвердить </a>
+                  </div></div>
+                  <button class="popup__close" id="popup_close">✖</button>
+                </div>
+              </div>
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <div class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com</div>
+            <div class="feedback"><img src="./img/Phone.png" class="feedback-img"> +7 (777) 375-10-51</div>
+        </div>
+    </footer>
+</body>
+<script src="script2.js"></script>
+<script src="filter.js"></script>
+
+</html>
