@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Подтверждение заказа</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+
+        <div class="main-wrapper-success">
+            <section class="confirmation-message">
+                <h2>Ваш заказ успешно принят!</h2>
+                <section class="order-details">
+                    <h3>Детали вашего заказа:</h3>
+                    <ul id="order_list"></ul>
+                    <p>Итоговая сумма: <strong id="total_cost"></strong></p>
+                    <p>Примерное время прибытия заказа <strong> 5-15 дней</strong> в зависимости от места проживания</p>
+                </section> </section> 
+                <a href="katalog.html" class="back-btn"> Вернуться назад</a>
+            </div>
+            
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const order = JSON.parse(localStorage.getItem('order'));
+
+                        if (order) {
+                            const orderList = document.getElementById('order_list');
+                            const totalCost = document.getElementById('total_cost');
+                            order.products.forEach(item => {
+                                const orderItem = document.createElement('li');
+                                orderItem.textContent = `${item.name} - ${item.price} руб.`;
+                                orderList.appendChild(orderItem);
+                            });
+
+
+                            totalCost.textContent = `${order.products.reduce(function (currentSum, item) {
+                                return currentSum + +item.price
+                            }, 0)} руб.`;
+                        } else {
+                            const orderList = document.getElementById('order_list');
+                            orderList.innerHTML = '<li>Ваш заказ отсутствует.</li>';
+                        }
+                    });
+                </script>
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Создать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <p class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com </p>
+            <p class="feedback"><img src="./img/tg.png" class="feedback-img"> SferaTg</p>
+            <p class="feedback"><img src="./img/Phone.png" class="feedback-img">+7 (777) 375-10-51 </p>
+        </div>
+        </div>
+    </footer>
+</body>
+<script src="script2.js"></script>
+
+</html>

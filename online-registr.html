@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Записаться онлайн</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-left">
+                <img src="./img/logo.png" class="logo">
+                <p class="p-title">Оптика <span>Сфера</span></p>
+            </div>
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="recipe.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+    </header>
+    <main>
+            <div class="btn-wrapper">
+                <button onclick="showForm(1)" id="btn1" class="active">Персональный подбор оправ</button>
+                <button onclick="showForm(2)" id="btn2">Проверка зрения</button>
+            </div>
+
+            <div id="form1" class="form-container active">
+                <h2>Запись на персональный подбор оправ</h2>
+                <p>Запись бесплатная, при покупке очков после консультации скидка -10%</p>
+                <form onsubmit="return validateForm(1)">
+                    <div class="inp-wrapper">
+                        <input type="text" id="name1" name="name1" placeholder="Имя">
+                        <input type="tel" id="tel1" name="tel1" placeholder="Номер телефона">
+                        <input type="date" id="date1" name="date1" placeholder="Дата">
+                    </div>
+                    <input type="submit" value="Отправить" class="btn-submit">
+                </form>
+            </div>
+
+            <div id="form2" class="form-container">
+                <h2>Запись на проверку зрения</h2>
+                <p>Запись бесплатная, при покупке очков после проверки скидка -10%</p>
+                <form onsubmit="return validateForm(2)">
+                    <div class="inp-wrapper">
+                        <input type="text" id="name2" name="name2" placeholder="Имя">
+                        <input type="tel" id="tel2" name="tel2" placeholder="Номер телефона">
+                        <input type="date" id="date2" name="date2" placeholder="Дата">
+                    </div>
+                    <input type="submit" value="Отправить" class="btn-submit">
+                </form>
+            </div>
+            <div id="success-message" class="message" style="display:none;">
+                <p>Ваша заявка успешно отправлена!</p>
+            </div>
+
+            <script>
+                function showForm(formNumber) {
+                    document.getElementById('form1').classList.remove('active');
+                    document.getElementById('form2').classList.remove('active');
+                    document.getElementById('btn1').classList.remove('active');
+                    document.getElementById('btn2').classList.remove('active');
+
+                    if (formNumber === 1) {
+                        document.getElementById('form1').classList.add('active');
+                        document.getElementById('btn1').classList.add('active');
+                    } else if (formNumber === 2) {
+                        document.getElementById('form2').classList.add('active');
+                        document.getElementById('btn2').classList.add('active');
+                    }
+                };
+                function validateForm(formNumber) {
+                    let isValid = true;
+
+                    if (formNumber === 1) {
+                        isValid = document.getElementById('name1').value &&
+                            document.getElementById('tel1').value &&
+                            document.getElementById('date1').value;
+                    } else if (formNumber === 2) {
+                        isValid = document.getElementById('name2').value &&
+                            document.getElementById('tel2').value &&
+                            document.getElementById('date2').value;
+                    }
+
+                    if (!isValid) {
+                        alert("Пожалуйста, заполните все поля.");
+                        return false;
+                    } 
+                    // else {
+                    //     alert("Ваша заявка отправлена.");
+                    //     return true;
+                    // }
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+    const forms = [document.getElementById('form1').querySelector('form'), document.getElementById('form2').querySelector('form')];
+
+    forms.forEach((form, index) => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get the active form
+            const activeForm = document.querySelector('.form-container.active form');
+            const name = activeForm.querySelector('input[type="text"]').value;
+            const tel = activeForm.querySelector('input[type="tel"]').value;
+            const date = activeForm.querySelector('input[type="date"]').value;
+
+            const data = {
+                name: name,
+                tel: tel,
+                date: date,
+                type: index === 0 ? 'personal selection' : 'vision check'
+            };
+
+            try {
+                const response = await fetch("mail2.php", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8"
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Ошибка при отправке данных');
+                }
+
+                const result = await response.text();
+                const message = document.getElementById('success-message');
+                message.style.display = 'block';
+                
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 5000);
+                activeForm.reset();
+
+            } catch (error) {
+                console.error('Произошла ошибка:', error);
+                alert('Произошла ошибка при отправке данных');
+            }
+        });
+    });
+});
+            </script>
+
+            <div class="details-p">
+                <p>Почему Вам стоит записаться на бесплатный подбор оправ прежде чем приходить к нам?</p>
+                <ul>
+                    <li><span>1. Индивидуальный подход:</span> Запись на подбор оправ позволяет нашим консультантам
+                        заранее подготовиться к вашей встрече.
+                        Это означает, что мы сможем предложить вам наиболее подходящие варианты, учитывая ваш стиль,
+                        предпочтения и формы лица.
+                        Мы позаботимся о том, чтобы вы получили лучший сервис.</li>
+                    <li><span>2. Оптимизация времени: </span> Записываясь на бесплатный подбор оправ, вы сэкономите
+                        время. Вы сможете избежать
+                        очередей и ненужной суеты и сосредоточиться на выборе именно той оправы, которая вам нравится.
+                    </li>
+                    <li><span>3. Профессиональные рекомендации:</span> Наши консультанты — это профессионалы в области
+                        оптики и стиля. Они
+                        помогут вам выбрать оправу не только по внешнему виду, но и по функциональности, например,
+                        учитывая ваши потребности
+                        в зрении и назначение очков (для работы, спорта, отдыха и т.д.).</li>
+                    <li><span>4. Подбор аксессуаров:</span> Мы можем предложить вам подходящие аксессуары, такие как
+                        защитные чехлы, салфетки
+                        для ухода за очками и другие полезные вещи, которые дополнят ваш образ и помогут ухаживать за
+                        очками.</li>
+                    <li><span>5. Заботимся о вашем комфорте:</span> Во время подбора мы уделим внимание не только вашим
+                        предпочтениям, но и вашему комфортному времяпрепровождению в нашем магазине. Вы будете
+                        чувствовать себя уютно и расслабленно, что поможет вам сделать лучший выбор.</li>
+
+
+                </ul>
+            </div>
+
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <p class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com </p>
+            <p class="feedback"><img src="./img/tg.png" class="feedback-img"> SferaTg</p>
+            <p class="feedback"><img src="./img/Phone.png" class="feedback-img">+7 (777) 375-10-51 </p>
+        </div>
+    </footer>
+</body>
+
+
+</html>

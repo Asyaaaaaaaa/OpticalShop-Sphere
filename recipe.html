@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <title>Заказать очки</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+        <div class="header-left">
+            <img src="./img/logo.png" class="logo">
+            <p class="p-title">Оптика <span>Сфера</span></p>
+        </div>
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="promo.html">Скидки и акции</a>
+                <a href="recipe.html">Заказать очки</a>
+                <a href="online-registr.html">Записаться онлайн</a>
+            </div>
+    </header>
+    <main>
+        <form id="orderForm" class="form" autocomplete="off">
+            <div class="main-form">
+                <div class="form-title">
+                    <h5>Заказ очков по рецепту</h5>
+                </div>
+                <div class="form-wrapper">
+                    <div class="form-date">
+                        <div class="type-p">
+                            <p>Дата выдачи рецепта:</p>
+                        </div>
+                        <div class="type-inputs">
+                            <input type="date" class="date-input" required name="date" id="date">
+                        </div>
+                    </div>
+                    <div class="form-eyes">
+                        <div class="type-p">
+                            <p>Правый глаз (OD):</p>
+                        </div>
+                        <div class="type-inputs long-row">
+                            <div class="axis-item">
+                                <p>Sph</p> <input type="number" min="-30.00" max="20.00" step="0.25"
+                                        placeholder="от -30.00 до +20.00" required name="ODSph" id="ODSph">
+                                    </div>
+                                <div class="axis-item">
+                                <p>cyl</p> <input type="number" min="-6.00" max="-0.25" step="0.25"
+                                        placeholder="от -0.25 до -6.00" required name="ODcyl" id="ODcyl">
+                                    </div>
+                                <div class="axis-item">
+                                <p>ax</p> <input type="number" min="0" max="180" step="1" placeholder="от 0° до 180°" required name="ODax" id="ODax">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-eyes">
+                        <div class="type-p">
+                            <p>Левый глаз (OS):</p>
+                        </div>
+                        <div class="type-inputs long-row">
+                            <div class="axis-item">
+                            <p>Sph</p> <input type="number" min="-30.00" max="20.00" step="0.25"
+                                    placeholder="от -30.00 до +20.00" required name="OSSph" id="OSSph">
+                                </div>
+                            <div class="axis-item">
+                            <p>cyl</p> <input type="number" min="-6.00" max="-0.25" step="0.25"
+                                    placeholder="от -0.25 до -6.00" required name="OScyl" id="OScyl">
+                                </div>
+                            <div class="axis-item">
+                            <p>ax</p> <input type="number" min="0" max="180" step="1" placeholder="от 0° до 180°" required name="OSax" id="OSax">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-eyes">
+                        <div class="type-p">
+                            <p>AXIS/AX - ось:</p>
+                            <span>(Если есть астигматизм)</span>
+                        </div>
+                        <div class="type-inputs long-row">
+                            <div class="axis-item">
+                                <p>OD</p>
+                                <input type="number" min="0" max="180" step="1" placeholder="от 0° до 180°" name="ODaxis" id="ODaxis">
+                            </div>
+                            <div class="axis-item">
+                                <p>OS</p>
+                                <input type="number" min="0" max="180" step="1" placeholder="от 0° до 180°" name="OSaxis" id="OSaxis">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeGlasses">
+                        <div class="type-p">
+                            <p>Тип очков:</p>
+                        </div>
+                        <div class="type-select">
+                            <select required name="type" id="type">
+                                <option>Рассеивающие (близорукость)</option>
+                                <option>Собирающие (дальнозоркость)</option>
+                                <option>Астигматические</option>
+                                <option>Асферические</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-eyes">
+                        <div class="type-p">
+                        <P>Возраст:</P>
+                    </div>
+                    <div class="type-inputs">
+                        <input class="age-inp" type="number" min="5" max="120" required placeholder="Ваш возраст" name="age" id="age">
+                    </div>
+                    </div>
+                    <div class="field-second-part">
+                        <P>Примечание:</P>
+                        <input type="text" class="desc-input" maxlength="300" required name="note" id="note">
+                    </div>
+                    <div class="field-second-part">
+                        <P>Кому:</P>
+                        <input type="text" class="desc-input" maxlength="300" required name="name" id="name">
+                    </div>
+                    
+                    <div class="field-second-part design">
+                        <P>Пожелания к дизайну:</P>
+                        <input type="text" class="desc-input" maxlength="300" required name="preferences" id="preferences">
+                    </div>
+                    <div class="field-second-part contacts">
+                        <p>Как с Вами связаться:</p>
+                        <div class="third-part-wrapper">
+                            <div class="third-part-row">
+                                <p>По номеру телефона:</p>
+                                <input type="tel" class="tel-inp" placeholder="Номер телефона" name="tel" id="tel">
+                            </div>
+                            <div class="messenger-select third-part-row">
+                                <p>Через мессенджер:</p>
+                                <label>
+                                    <input type="radio" name="messenger" value="tg" class="messenger-radio">
+                                    <img src="./img/tg.png" class="messenger-icon">
+                                </label>
+                                <label>
+                                    <input type="radio" name="messenger" value="wa" class="messenger-radio">
+                                    <img src="./img/wa.png" class="messenger-icon">
+                                </label>
+                                <label>
+                                    <input type="radio" name="messenger" value="vb" class="messenger-radio">
+                                    <img src="./img/vb.png" class="messenger-icon">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" name="button"> Отправить </button>
+
+                </div>
+            </div>
+            </div>
+        </form>
+
+        <div id="success-message" class="message" style="display:none;">
+            <p>Ваша заявка успешно отправлена!</p>
+        </div>
+
+        <section class="faq recipe-faq">
+            <details>
+                <summary>Подробнее</summary>
+                <p class="recipe-summary-p">Заказ очков по рецепту в оптике Сфера - это простой и удобный процесс,
+                    который можно осуществить прямо на нашем сайте. Для оформления заказа вам необходимо предоставить
+                    актуальный рецепт от врача-офтальмолога или медицинского оптика-оптометриста. На основе этих данных
+                    наши специалисты произведут расчет и изготовят очки, полностью соответствующие вашим параметрам
+                    зрения.<br><br>
+
+                    Предоставить актуальный рецепт от врача-офтальмолога или медицинского оптика-оптометриста. На основе
+                    этих данных наши специалисты произведут расчет и изготовят очки, полностью соответствующие вашим
+                    параметрам зрения.<br><br>
+
+                    После оформления заказа на сайте и получения его нашими работниками вы получите квитанцию-заказ
+                    (лично или на выбранный мессенджер), где будут указаны все необходимые параметры для изготовления
+                    очков, а также стоимость материалов и услуг.<br><br>
+
+                    Срок изготовления очков строго регламентирован и указывается в квитанции-заказе. При получении
+                    готового изделия вы проверяете качество изготовления и отсутствие дефектов, после чего подтверждаете
+                    получение подписью.<br><br>
+
+                    Стоимость очков формируется из цены оправы, линз и услуг по изготовлению. Возможна как полная оплата
+                    при оформлении заказа, так и внесение предварительной оплаты за линзы и изготовление с последующей
+                    доплатой при получении.<br><br>
+
+                    Все работы выполняются с соблюдением требований ГОСТа на корригирующие очки. Мы гарантируем высокое
+                    качество изготовления и точность соответствия вашему рецепту.<br><br>
+
+                    В случае если вы хотите использовать собственные линзы или оправы, наши специалисты проверят их
+                    пригодность и качество перед изготовлением очков (напишите это в строке "Пожелания к
+                    дизайну").<br><br>
+
+                    Обращаем внимание, что для сохранения права на получение заказа необходимо забрать готовые очки в
+                    течение 3 месяцев с указанной в квитанции даты готовности.</p>
+            </details>
+        </section>
+
+    </main>
+    <footer>
+        <div class="header-wrapper footer_link">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="promo.html">Скидки и акции</a>
+            <a href="create.html">Заказать очки</a>
+            <a href="online-registr.html">Записаться онлайн</a>
+        </div>
+        <div class="foot-wrapper">
+            <p class="feedback"><img src="./img/mail.png" class="feedback-img"> Sfera@gmail.com </p>
+            <p class="feedback"><img src="./img/tg.png" class="feedback-img"> SferaTg</p>
+            <p class="feedback"><img src="./img/Phone.png" class="feedback-img">+7 (777) 375-10-51 </p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dateInput = document.querySelector('.date-input');
+
+        dateInput.min = new Date().toISOString().split('T')[0];
+
+    });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('orderForm'); // Укажите ID вашей формы
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        try {
+            // Получаем значения всех полей формы
+            const data = {
+                name: document.getElementById("name").value,
+                tel: document.getElementById("tel").value,
+                date: document.getElementById("date").value,
+                ODSph: document.getElementById("ODSph").value,
+                ODcyl: document.getElementById("ODcyl").value,
+                ODax: document.getElementById("ODax").value,
+                OSSph: document.getElementById("OSSph").value,
+                OScyl: document.getElementById("OScyl").value,
+                OSax: document.getElementById("OSax").value,
+                ODaxis: document.getElementById("ODaxis").value,
+                OSaxis: document.getElementById("OSaxis").value,
+                type: document.getElementById("type").value,
+                age: document.getElementById("age").value,
+                note: document.getElementById("note").value,
+                preferences: document.getElementById("preferences").value
+            };
+
+            // Отправляем данные
+            const response = await fetch("mail.php", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Ошибка при отправке данных');
+            }
+
+            const result = await response.text();
+                
+                // Показываем сообщение об успехе
+                const message = document.getElementById('success-message');
+                message.style.display = 'block';
+                
+                // Добавляем автоматическое скрытие через 5 секунд
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 5000);
+                form.reset();
+
+        } catch (error) {
+            console.error('Произошла ошибка:', error);
+            alert('Произошла ошибка при отправке данных');
+        }
+    });
+});
+</script>
+
+</html>
